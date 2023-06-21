@@ -1,0 +1,42 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "test1",
+        "intent": "abc1",
+        "entities": []
+      },
+      {
+        "text": "what types of organizations and businesses need registration on platform",
+        "intent": "intent_registration_business",
+        "entities": [
+          {
+            "start": 32,
+            "end": 42,
+            "value": "businesses",
+            "entity": "business"
+          },
+          {
+            "start": 14,
+            "end": 27,
+            "value": "organizations",
+            "entity": "organizations"
+          },
+          {
+            "start": 48,
+            "end": 60,
+            "value": "registration",
+            "entity": "register"
+          },
+         
+          {
+            "start": 74,
+            "end": 82,
+            "value": "platform",
+            "entity": "platform"
+          }
+        ]
+      }
+    ]
+  }
+}
