@@ -25,9 +25,9 @@ def validate_data(text, intent, entities_list):
 
     return obj_dict
 
-
+path = "app/static/json/json_data.json"
 def add_json(k, v):
-    file = open('./input/data.json', 'r+', encoding="utf8")
+    file = open(path, 'r+', encoding="utf8")
     # Move the file pointer to the beginning
     file.seek(0)
     json_data = json.load(file)
@@ -58,7 +58,7 @@ def add_json(k, v):
 
 
 def read_json():
-    with open('./input/data.json', 'r', encoding="utf8") as f:
+    with open(path, 'r', encoding="utf8") as f:
         json_data = json.load(f)
 
     final_data = {"rasa_nlu_data": {
@@ -94,7 +94,7 @@ def read_json():
 # read_json()
 
 def remove_json(k, v=""):
-    file = open('./input/data.json', 'r+', encoding="utf8")
+    file = open(path, 'r+', encoding="utf8")
     # Move the file pointer to the beginning
     file.seek(0)
     json_data = json.load(file)
